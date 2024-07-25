@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-ct": "playwright test -c playwright-ct.config.ts",
-    "pw": "playwright test -c playwright-ct.config.ts --ui"
+    "orval": "orval"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/experimental-ct-vue": "^1.42.1",
-    "@types/node": "^20.11.27"
+    "@types/node": "^20.11.27",
+    "orval": "^7.0.0"
   },
   "dependencies": {
     "vue": "^3.4.21"
