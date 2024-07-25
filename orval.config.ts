@@ -14,7 +14,7 @@ function modifyRecursive(obj: object, fn: (obj: object) => boolean) {
 export default defineConfig({
   swapi: {
     input: {
-      target: "../../SwWeb2/api.json",
+      target: "src/petstore.yaml",
       override: {
         transformer: (api) => {
           modifyRecursive(api, (value) => {

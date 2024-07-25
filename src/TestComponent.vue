@@ -1,18 +1,9 @@
 <script lang="ts" setup>
-import {ref} from "vue";
+import {useShowPetById} from "./api/pets/pets";
 
-const submitted = ref(false);
+const {data: pet, error: petError} = useShowPetById("100");
 </script>
 <template>
-  <div v-if="submitted">
-    Form Submitted
-    <button @click="submitted = false">Reset</button>
-  </div>
-  <form :style="{display: 'flex', flexDirection: 'column'}" @submit.prevent="submitted = true" v-else>
-    <label for="username">Username</label>
-    <input id="username" type="text">
-    <label for="password">Password</label>
-    <input id="password" type="password">
-    <button type="submit">Login</button>
-  </form>
+  <div v-if="petError">{{petError}}</div>
+  <div v-else>{{pet}}</div>
 </template>
